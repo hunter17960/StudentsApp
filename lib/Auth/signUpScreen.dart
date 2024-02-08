@@ -1,6 +1,5 @@
 // ignore_for_file: use_build_context_synchronously, avoid_print, non_constant_identifier_names, unnecessary_null_comparison
 
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';

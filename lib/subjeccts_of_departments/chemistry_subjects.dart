@@ -59,8 +59,8 @@ class _SubjectsOfChemisteryState extends State<SubjectsOfChemistery> {
                       fit: BoxFit.cover,
                       opacity: 0.7),
                 ),
-                child: Row(
-                  children: const <Widget>[
+                child: const Row(
+                  children: <Widget>[
                     Expanded(
                       child: Text(
                         'General Chemistry',
@@ -100,8 +100,8 @@ class _SubjectsOfChemisteryState extends State<SubjectsOfChemistery> {
                       fit: BoxFit.cover,
                       opacity: 0.7),
                 ),
-                child: Row(
-                  children: const <Widget>[
+                child: const Row(
+                  children: <Widget>[
                     Expanded(
                       child: Text(
                         'Analytical Chemistryt',
@@ -141,8 +141,8 @@ class _SubjectsOfChemisteryState extends State<SubjectsOfChemistery> {
                       fit: BoxFit.cover,
                       opacity: 0.7),
                 ),
-                child: Row(
-                  children: const <Widget>[
+                child: const Row(
+                  children: <Widget>[
                     Expanded(
                       child: Text(
                         'Inorganic Chemistry',
@@ -182,8 +182,8 @@ class _SubjectsOfChemisteryState extends State<SubjectsOfChemistery> {
                       fit: BoxFit.cover,
                       opacity: 0.7),
                 ),
-                child: Row(
-                  children: const <Widget>[
+                child: const Row(
+                  children: <Widget>[
                     Expanded(
                       child: Text(
                         'Organic Chemistry',

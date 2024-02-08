@@ -42,8 +42,8 @@ class SubjectsOfGeology extends StatelessWidget {
                     fit: BoxFit.fill,
                     opacity: 0.7),
               ),
-              child: Row(
-                children: const <Widget>[
+              child: const Row(
+                children: <Widget>[
                   Expanded(
                     child: Text(
                       'mineralogy',
@@ -79,8 +79,8 @@ class SubjectsOfGeology extends StatelessWidget {
                     fit: BoxFit.cover,
                     opacity: 0.7),
               ),
-              child: Row(
-                children: const <Widget>[
+              child: const Row(
+                children: <Widget>[
                   Expanded(
                     child: Text(
                       'Environmental Geology',
@@ -116,8 +116,8 @@ class SubjectsOfGeology extends StatelessWidget {
                     fit: BoxFit.cover,
                     opacity: 0.7),
               ),
-              child: Row(
-                children: const <Widget>[
+              child: const Row(
+                children: <Widget>[
                   Expanded(
                     child: Text(
                       'Structural Geology',

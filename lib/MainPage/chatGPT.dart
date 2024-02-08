@@ -21,7 +21,7 @@ class _HomePageState extends State<chatGPT> {
             "ChatGPT",
             style: TextStyle(color: Colors.white70, fontSize: 25),
           ),
-          backgroundColor: Color(0xff404150),
+          backgroundColor: const Color(0xff404150),
           elevation: 2,
           centerTitle: true,
         ),
@@ -81,7 +81,7 @@ class _HomePageState extends State<chatGPT> {
                           child: TextField(
                         controller: chatTextEditing,
                         style: const TextStyle(color: Colors.white60),
-                        decoration: InputDecoration.collapsed(
+                        decoration: const InputDecoration.collapsed(
                             hintText: "send a message.",
                             hintStyle: TextStyle(color: Colors.white70)),
                       )),
@@ -112,7 +112,7 @@ class _HomePageState extends State<chatGPT> {
     DioHelper.postData(url: "completions", data: {
       "model": "gpt-3.5-turbo",
       "messages": [
-        {"role": "user", "content": "${chatTextEditing.text}"}
+        {"role": "user", "content": chatTextEditing.text}
       ],
       // "temperature": 0,
       // "max_tokens": 500

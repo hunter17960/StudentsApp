@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:students_app/Departments/Departments.dart';
 import 'package:students_app/subjeccts_of_departments/zoology_subjects.dart';
 
 class LevelsOfZoology extends StatelessWidget {
@@ -33,7 +32,7 @@ class LevelsOfZoology extends StatelessWidget {
                   MaterialPageRoute(
                       builder: (context) => const SubjectsOfZoology()));
             },
-            trailingIcon: Icon(Icons.arrow_circle_right, size: 40),
+            trailingIcon: const Icon(Icons.arrow_circle_right, size: 40),
             child: const Text(
               "First Level",
               style: TextStyle(
@@ -52,7 +51,7 @@ class LevelsOfZoology extends StatelessWidget {
                   MaterialPageRoute(
                       builder: (context) => const SubjectsOfZoology()));
             },
-            trailingIcon: Icon(Icons.arrow_circle_right, size: 40),
+            trailingIcon: const Icon(Icons.arrow_circle_right, size: 40),
             child: const Text(
               "Second Level",
               style: TextStyle(
@@ -71,7 +70,7 @@ class LevelsOfZoology extends StatelessWidget {
                   MaterialPageRoute(
                       builder: (context) => const SubjectsOfZoology()));
             },
-            trailingIcon: Icon(Icons.arrow_circle_right, size: 40),
+            trailingIcon: const Icon(Icons.arrow_circle_right, size: 40),
             child: const Text(
               "Third Level",
               style: TextStyle(
@@ -90,7 +89,7 @@ class LevelsOfZoology extends StatelessWidget {
                   MaterialPageRoute(
                       builder: (context) => const SubjectsOfZoology()));
             },
-            trailingIcon: Icon(Icons.arrow_circle_right, size: 40),
+            trailingIcon: const Icon(Icons.arrow_circle_right, size: 40),
             child: const Text(
               "Fourth Level",
               style: TextStyle(

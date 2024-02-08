@@ -68,8 +68,8 @@ class Chemistry extends StatelessWidget {
                   image: AssetImage("assets/chemistry.jpeg"),
                   fit: BoxFit.cover),
             ),
-            child: Row(
-              children: const <Widget>[
+            child: const Row(
+              children: <Widget>[
                 Expanded(
                   child: Text(
                     'Chemistry Department',
@@ -116,8 +116,8 @@ class Physics extends StatelessWidget {
               image: DecorationImage(
                   image: AssetImage("assets/Physics.jpeg"), fit: BoxFit.cover),
             ),
-            child: Row(
-              children: const <Widget>[
+            child: const Row(
+              children: <Widget>[
                 Expanded(
                   child: Text(
                     'Physics Department',
@@ -165,8 +165,8 @@ class Mathematics extends StatelessWidget {
                   image: AssetImage("assets/Mathematics.jpeg"),
                   fit: BoxFit.cover),
             ),
-            child: Row(
-              children: const <Widget>[
+            child: const Row(
+              children: <Widget>[
                 Expanded(
                   child: Text(
                     'Mathematics Department',
@@ -213,8 +213,8 @@ class Geology extends StatelessWidget {
               image: DecorationImage(
                   image: AssetImage("assets/Geology.jpeg"), fit: BoxFit.cover),
             ),
-            child: Row(
-              children: const <Widget>[
+            child: const Row(
+              children: <Widget>[
                 Expanded(
                   child: Text(
                     'Geology Department',
@@ -261,8 +261,8 @@ class Zoology extends StatelessWidget {
               image: DecorationImage(
                   image: AssetImage("assets/Zoology.jpeg"), fit: BoxFit.cover),
             ),
-            child: Row(
-              children: const <Widget>[
+            child: const Row(
+              children: <Widget>[
                 Expanded(
                   child: Text(
                     'Zoology Department',
@@ -308,8 +308,8 @@ class Botany extends StatelessWidget {
               image: DecorationImage(
                   image: AssetImage("assets/Botany.jpeg"), fit: BoxFit.cover),
             ),
-            child: Row(
-              children: const <Widget>[
+            child: const Row(
+              children: <Widget>[
                 Expanded(
                   child: Text(
                     'Botany Department',

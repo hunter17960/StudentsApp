@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:students_app/Departments/Departments.dart';
 
-import '../subjeccts_of_departments/chemistry_subjects.dart';
 import '../subjeccts_of_departments/physics_subject.dart';
 
 class LevelsOfPhysics extends StatelessWidget {
@@ -35,7 +33,7 @@ class LevelsOfPhysics extends StatelessWidget {
                   MaterialPageRoute(
                       builder: (context) => const SubjectOfPhysics()));
             },
-            trailingIcon: Icon(Icons.arrow_circle_right, size: 40),
+            trailingIcon: const Icon(Icons.arrow_circle_right, size: 40),
             child: const Text(
               "First Level",
               style: TextStyle(
@@ -54,7 +52,7 @@ class LevelsOfPhysics extends StatelessWidget {
                   MaterialPageRoute(
                       builder: (context) => const SubjectOfPhysics()));
             },
-            trailingIcon: Icon(Icons.arrow_circle_right, size: 40),
+            trailingIcon: const Icon(Icons.arrow_circle_right, size: 40),
             child: const Text(
               "Second Level",
               style: TextStyle(
@@ -73,7 +71,7 @@ class LevelsOfPhysics extends StatelessWidget {
                   MaterialPageRoute(
                       builder: (context) => const SubjectOfPhysics()));
             },
-            trailingIcon: Icon(Icons.arrow_circle_right, size: 40),
+            trailingIcon: const Icon(Icons.arrow_circle_right, size: 40),
             child: const Text(
               "Third Level",
               style: TextStyle(
@@ -92,7 +90,7 @@ class LevelsOfPhysics extends StatelessWidget {
                   MaterialPageRoute(
                       builder: (context) => const SubjectOfPhysics()));
             },
-            trailingIcon: Icon(Icons.arrow_circle_right, size: 40),
+            trailingIcon: const Icon(Icons.arrow_circle_right, size: 40),
             child: const Text(
               "Fourth Level",
               style: TextStyle(

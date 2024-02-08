@@ -1,4 +1,3 @@
-// ignore_for_file: use_build_context_synchronously, avoid_print, non_constant_identifier_names
 
 import 'dart:io';
 
@@ -6,8 +5,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
-import 'package:students_app/Auth/buttonOfLogIn&SignUp.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:students_app/Auth/button_of_login_signup.dart';
 import 'package:students_app/MainPage/mainPage.dart';
 
 class LogIn extends StatefulWidget {
@@ -205,7 +204,7 @@ class _LogInState extends State<LogIn> {
                         titleTextStyle:
                             const TextStyle(color: Colors.redAccent),
                         content: Text(
-                          '${e}',
+                          '$e',
                           style: const TextStyle(
                             fontSize: 18,
                             color: Colors.black45,

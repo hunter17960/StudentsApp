@@ -42,8 +42,8 @@ class SubjectsOfMathematics extends StatelessWidget {
                     fit: BoxFit.cover,
                     opacity: 0.7),
               ),
-              child: Row(
-                children: const <Widget>[
+              child: const Row(
+                children: <Widget>[
                   Expanded(
                     child: Text(
                       'Statistics Fundamentals',
@@ -79,8 +79,8 @@ class SubjectsOfMathematics extends StatelessWidget {
                     fit: BoxFit.cover,
                     opacity: 0.7),
               ),
-              child: Row(
-                children: const <Widget>[
+              child: const Row(
+                children: <Widget>[
                   Expanded(
                     child: Text(
                       'Pure mathematics',
@@ -116,8 +116,8 @@ class SubjectsOfMathematics extends StatelessWidget {
                     fit: BoxFit.cover,
                     opacity: 0.7),
               ),
-              child: Row(
-                children: const <Widget>[
+              child: const Row(
+                children: <Widget>[
                   Expanded(
                     child: Text(
                       'Calculators mathematics',
@@ -153,8 +153,8 @@ class SubjectsOfMathematics extends StatelessWidget {
                     fit: BoxFit.cover,
                     opacity: 0.7),
               ),
-              child: Row(
-                children: const <Widget>[
+              child: const Row(
+                children: <Widget>[
                   Expanded(
                     child: Text(
                       'differentiation mathematics',

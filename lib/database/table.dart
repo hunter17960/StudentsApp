@@ -34,9 +34,9 @@ class TableData extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
+                children: [
                   Text(
                     "س.الفصل ",
                     style: TextStyle(

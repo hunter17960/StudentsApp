@@ -42,8 +42,8 @@ class SubjectsOfBotany extends StatelessWidget {
                     fit: BoxFit.cover,
                     opacity: 0.7),
               ),
-              child: Row(
-                children: const <Widget>[
+              child: const Row(
+                children: <Widget>[
                   Expanded(
                     child: Text(
                       'Plant Anatomy and Morphology',
@@ -79,8 +79,8 @@ class SubjectsOfBotany extends StatelessWidget {
                     fit: BoxFit.cover,
                     opacity: 0.7),
               ),
-              child: Row(
-                children: const <Widget>[
+              child: const Row(
+                children: <Widget>[
                   Expanded(
                     child: Text(
                       'Plant Taxonomy',
@@ -116,8 +116,8 @@ class SubjectsOfBotany extends StatelessWidget {
                     fit: BoxFit.cover,
                     opacity: 0.7),
               ),
-              child: Row(
-                children: const <Widget>[
+              child: const Row(
+                children: <Widget>[
                   Expanded(
                     child: Text(
                       'Plant Genetics',

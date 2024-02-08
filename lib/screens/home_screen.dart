@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import '../screens/note_reader.dart';
 import '../screens/note_editor.dart';
-import '../style/app_style.dart';
 import '../widgets/note_card.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -14,9 +13,10 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  @override
   Widget build(BuildContext context) {
-    final FirebaseAuth _auth = FirebaseAuth.instance;
-    final User? user = _auth.currentUser;
+    final FirebaseAuth auth = FirebaseAuth.instance;
+    final User? user = auth.currentUser;
     final String userId = user?.uid ?? '';
     return Scaffold(
         backgroundColor: Colors.white,

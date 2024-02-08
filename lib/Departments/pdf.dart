@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:students_app/Departments/downloading_dialog.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
-void main() => runApp(PDF());
+void main() => runApp(const PDF());
 
 class PDF extends StatelessWidget {
   const PDF({super.key});
@@ -19,7 +18,7 @@ class PDF extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // A widget which will be started on application startup
-      home: PDFReaderApp(),
+      home: const PDFReaderApp(),
     );
   }
 }

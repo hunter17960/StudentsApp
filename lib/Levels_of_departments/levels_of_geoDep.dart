@@ -32,7 +32,7 @@ class LevelsOfGeology extends StatelessWidget {
                   MaterialPageRoute(
                       builder: (context) => const SubjectsOfGeology()));
             },
-            trailingIcon: Icon(Icons.arrow_circle_right, size: 40),
+            trailingIcon: const Icon(Icons.arrow_circle_right, size: 40),
             child: const Text(
               "First Level",
               style: TextStyle(
@@ -51,7 +51,7 @@ class LevelsOfGeology extends StatelessWidget {
                   MaterialPageRoute(
                       builder: (context) => const SubjectsOfGeology()));
             },
-            trailingIcon: Icon(Icons.arrow_circle_right, size: 40),
+            trailingIcon: const Icon(Icons.arrow_circle_right, size: 40),
             child: const Text(
               "Second Level",
               style: TextStyle(
@@ -70,7 +70,7 @@ class LevelsOfGeology extends StatelessWidget {
                   MaterialPageRoute(
                       builder: (context) => const SubjectsOfGeology()));
             },
-            trailingIcon: Icon(Icons.arrow_circle_right, size: 40),
+            trailingIcon: const Icon(Icons.arrow_circle_right, size: 40),
             child: const Text(
               "Third Level",
               style: TextStyle(
@@ -89,7 +89,7 @@ class LevelsOfGeology extends StatelessWidget {
                   MaterialPageRoute(
                       builder: (context) => const SubjectsOfGeology()));
             },
-            trailingIcon: Icon(Icons.arrow_circle_right, size: 40),
+            trailingIcon: const Icon(Icons.arrow_circle_right, size: 40),
             child: const Text(
               "Fourth Level",
               style: TextStyle(

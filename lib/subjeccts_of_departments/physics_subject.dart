@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:students_app/Departments/ChemistryPage.dart';
 import 'package:students_app/Departments/PhysicsPage.dart';
 
 class SubjectOfPhysics extends StatelessWidget {
@@ -43,8 +42,8 @@ class SubjectOfPhysics extends StatelessWidget {
                     fit: BoxFit.cover,
                     opacity: 0.7),
               ),
-              child: Row(
-                children: const <Widget>[
+              child: const Row(
+                children: <Widget>[
                   Expanded(
                     child: Text(
                       'General Physics',
@@ -80,8 +79,8 @@ class SubjectOfPhysics extends StatelessWidget {
                     fit: BoxFit.cover,
                     opacity: 0.7),
               ),
-              child: Row(
-                children: const <Widget>[
+              child: const Row(
+                children: <Widget>[
                   Expanded(
                     child: Text(
                       'Waves',
@@ -117,8 +116,8 @@ class SubjectOfPhysics extends StatelessWidget {
                     fit: BoxFit.cover,
                     opacity: 0.8),
               ),
-              child: Row(
-                children: const <Widget>[
+              child: const Row(
+                children: <Widget>[
                   Expanded(
                     child: Text(
                       'Mathematical Physics',
@@ -154,8 +153,8 @@ class SubjectOfPhysics extends StatelessWidget {
                     fit: BoxFit.cover,
                     opacity: 0.7),
               ),
-              child: Row(
-                children: const <Widget>[
+              child: const Row(
+                children: <Widget>[
                   Expanded(
                     child: Text(
                       'Electromagnetism Physics',

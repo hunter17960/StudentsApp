@@ -59,9 +59,9 @@ class FacultyOfScience extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context).pushReplacementNamed(routeName);
                     },
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: [
                         Text(
                           'Skip',
                           style: TextStyle(fontSize: 22),

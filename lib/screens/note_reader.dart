@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../style/app_style.dart';
 
 class NoteReaderScreen extends StatefulWidget {
-  NoteReaderScreen(this.doc, {Key? key}) : super(key: key);
-  QueryDocumentSnapshot doc;
+  const NoteReaderScreen(this.doc, {Key? key}) : super(key: key);
+  final QueryDocumentSnapshot doc;
 
   @override
   State<NoteReaderScreen> createState() => _NoteReaderScreenState();
@@ -13,10 +13,10 @@ class NoteReaderScreen extends StatefulWidget {
 class _NoteReaderScreenState extends State<NoteReaderScreen> {
   @override
   Widget build(BuildContext context) {
-    String color_id = widget.doc['color_id'].toString();
+    String colorId = widget.doc['color_id'].toString();
 
     return Scaffold(
-      backgroundColor: AppStyle.cardsColor[int.parse(color_id)],
+      backgroundColor: AppStyle.cardsColor[int.parse(colorId)],
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
