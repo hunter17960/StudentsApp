@@ -19,8 +19,7 @@ class NoteEditorScreen extends StatefulWidget {
 }
 
 class _NoteEditorScreenState extends State<NoteEditorScreen> {
-  String color_id = (Random().nextInt(AppStyle.cardsColor.length)).toString();
-  // int color_id = int.parse(color_ids);
+  String colorid = (Random().nextInt(AppStyle.cardsColor.length)).toString();
   String date = DateTime.now().toString();
   final _formKey = GlobalKey<FormState>();
   final TextEditingController _titleController = TextEditingController();
@@ -29,7 +28,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppStyle.cardsColor[int.parse(color_id)],
+      backgroundColor: AppStyle.cardsColor[int.parse(colorid)],
       body: Form(
         key: _formKey,
         child: Padding(
@@ -89,7 +88,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
               "note_title": _titleController.text,
               "creation_date": date,
               "note_content": _mainController.text,
-              "color_id": int.parse(color_id),
+              "color_id": int.parse(colorid),
               'user_id': userId.toString(),
             });
             Navigator.pop(context);

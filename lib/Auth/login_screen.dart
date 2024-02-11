@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:students_app/Auth/button_of_login_signup.dart';
-import 'package:students_app/MainPage/mainPage.dart';
+import 'package:students_app/MainPage/main_page.dart';
 
 class LogIn extends StatefulWidget {
   const LogIn({super.key});

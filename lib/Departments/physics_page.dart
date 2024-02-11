@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:students_app/Departments/pdfbutton.dart';
 
-class ZoologyPage extends StatelessWidget {
-  const ZoologyPage({super.key});
+class PhysicsPage extends StatelessWidget {
+  const PhysicsPage({super.key});
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const Zoology_data(title: 'Zoology Department');
+    return const PhysicsData(title: 'Physics Department');
   }
 }
 
-class Zoology_data extends StatelessWidget {
+class PhysicsData extends StatelessWidget {
   final String title;
-  const Zoology_data({super.key, required this.title});
+  const PhysicsData({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:students_app/subjeccts_of_departments/Botany_subjects.dart';
+import 'package:students_app/subjeccts_of_departments/botany_subjects.dart';
 class LevelsOfBotany extends StatelessWidget {
   const LevelsOfBotany({super.key});
 

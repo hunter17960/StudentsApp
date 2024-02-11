@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:students_app/Departments/GeologyPage.dart';
+import 'package:students_app/Departments/geology_page.dart';
 
 class SubjectsOfGeology extends StatelessWidget {
   const SubjectsOfGeology({super.key});

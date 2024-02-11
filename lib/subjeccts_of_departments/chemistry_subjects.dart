@@ -219,10 +219,13 @@ class _SubjectsOfChemisteryState extends State<SubjectsOfChemistery> {
         ),
       );
     } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
         content: Text('Not Found'),
         backgroundColor: Colors.red,
       ));
+      }
+      
     }
   }
 }

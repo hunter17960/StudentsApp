@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:students_app/Departments/BotanyPage.dart';
+import 'package:students_app/Departments/botany_page.dart';
 
 class SubjectsOfBotany extends StatelessWidget {
   const SubjectsOfBotany({super.key});

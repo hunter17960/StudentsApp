@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:students_app/Departments/PhysicsPage.dart';
+import 'package:students_app/Departments/physics_page.dart';
 
 class SubjectOfPhysics extends StatelessWidget {
   const SubjectOfPhysics({super.key});

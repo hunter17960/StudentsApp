@@ -6,13 +6,13 @@ class ChemistryPage extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const Chemistry_data(title: 'Chemistry Department');
+    return const ChemistryData(title: 'Chemistry Department');
   }
 }
 
-class Chemistry_data extends StatelessWidget {
+class ChemistryData extends StatelessWidget {
   final String title;
-  const Chemistry_data({super.key, required this.title});
+  const ChemistryData({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {

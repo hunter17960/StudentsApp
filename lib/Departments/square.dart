@@ -8,10 +8,10 @@ import 'package:flutter/material.dart';
 // import 'package:students_app/Departments/ZoologyPage.dart';
 import 'package:students_app/Levels_of_departments/levels_of_botany.dart';
 import 'package:students_app/Levels_of_departments/levels_of_chem_dep.dart';
-import 'package:students_app/Levels_of_departments/levels_of_geoDep.dart';
+import 'package:students_app/Levels_of_departments/levels_of_geo_dep.dart';
 import 'package:students_app/Levels_of_departments/levels_of_mathematics.dart';
-import 'package:students_app/Levels_of_departments/levels_of_phyiscsDep.dart';
-import 'package:students_app/Levels_of_departments/levels_of_zoologyDep.dart';
+import 'package:students_app/Levels_of_departments/levels_of_phyiscs_dep.dart';
+import 'package:students_app/Levels_of_departments/levels_of_zoology_dep.dart';
 
 const Color darkBlue = Color.fromARGB(255, 1, 87, 155);
 

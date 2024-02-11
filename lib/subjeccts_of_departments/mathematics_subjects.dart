@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:students_app/Departments/MathematicsPage.dart';
+import 'package:students_app/Departments/mathematics_page.dart';
 
 class SubjectsOfMathematics extends StatelessWidget {
   const SubjectsOfMathematics({super.key});

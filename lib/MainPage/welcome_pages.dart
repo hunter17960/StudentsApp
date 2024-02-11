@@ -1,19 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:students_app/WelcomePages/welPageOfBotany&Microbiology.dart';
-import 'package:students_app/WelcomePages/welPageOfChemistry.dart';
-import 'package:students_app/WelcomePages/welPageOfGeology.dart';
-import 'package:students_app/WelcomePages/welPageOfMathematics.dart';
-import 'package:students_app/WelcomePages/welPageOfPhysics.dart';
-import 'package:students_app/WelcomePages/welPageOfZoology&Entomology.dart';
 
-class PageViewExample extends StatefulWidget {
-  const PageViewExample({Key? key}) : super(key: key);
+class WelcomePage extends StatefulWidget {
+  const WelcomePage({Key? key}) : super(key: key);
 
   @override
-  State<PageViewExample> createState() => _PageViewExampleState();
+  State<WelcomePage> createState() => _WelcomePageState();
 }
 
-class _PageViewExampleState extends State<PageViewExample> {
+class _WelcomePageState extends State<WelcomePage> {
   final PageController pageController = PageController(initialPage: 0);
   int activePage = 0;
   @override
@@ -186,10 +180,41 @@ final List<Widget> _pages = [
         'The University of Assiut was established in October 1957, with only two faculties the faculty of Science and the faculty of Engineering.',
     textWelcome: 'Welcome to',
   ),
-  const MathematicsW(),
-  const PhysicsW(),
-  const ChemistryW(),
-  const GeologyW(),
-  const BotanyAndMicrobiology(),
-  const ZoologyAndEntomology(),
+  const FacultyOfScience(
+      imageName: 'math.png',
+      textWelcome: 'Department of Mathematics',
+      textAbout:
+          '“Mathematics is the queen of sciences” –As said by Carl Friedrich Gauss, the German Mathematician.',
+    ),
+  const FacultyOfScience(
+      imageName: 'phy.png',
+      textWelcome: 'Department of Physics',
+      textAbout:
+          'Discoveries in physics have formed the foundation of countless technological advances and play an important role in many scientific areas which make it one of the most fundamental scientific disciplines.',
+    ),
+  const FacultyOfScience(
+      imageName: 'chemistry.jpg',
+      textWelcome: 'Department of Chemistry',
+      textAbout:
+          'The Department of Chemistry is one of the oldest scientific departments in the university. The department has witnessed a great development since its establishment in 1957 with the establishment of the university.',
+    ),
+  const FacultyOfScience(
+      imageName: 'geology.jpg',
+      textWelcome: 'Department of Geology',
+      textAbout:
+          'Geoscientists gather and interpret data about the earth and other planets;  they use their knowledge to increase our understanding of the earth processes and to improve the quality of human life. Their work and career paths vary widely because the Geosciences are so broad and diverse.',
+    ),
+  const FacultyOfScience(
+      imageName: 'Botany.jpg',
+      textWelcome: 'Botany and Microbiology Department',
+      textAbout:
+          'We play an essential role in solving the environmental problems and in community services through cooperating with other scientific faculties and organizations through preparing a distinguished generation of scientists for the scientific, educational and industrial fields.',
+
+    ),
+  const FacultyOfScience(
+      imageName: 'Zoology & Entomology.jpg',
+      textWelcome: 'Department of Zoology & Entomology',
+      textAbout:
+          'Geoscientists gather and interpret data about the earth and other planets;  they use their knowledge to increase our understanding of the earth processes and to improve the quality of human life. Their work and career paths vary widely because the Geosciences are so broad and diverse.',
+    ),
 ];

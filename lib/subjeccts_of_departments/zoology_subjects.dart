@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:students_app/Departments/ZoologyPage.dart';
+import 'package:students_app/Departments/zoology_page.dart';
 
 class SubjectsOfZoology extends StatelessWidget {
   const SubjectsOfZoology({super.key});

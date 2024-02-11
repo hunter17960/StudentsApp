@@ -263,10 +263,6 @@ class _SignUpState extends State<SignUp> {
                       setState(() {
                         signLoading = true;
                       }); // Inside your form submission function
-                      void sendVerificationEmailOnSignUp() {
-                        sendVerificationEmail(email);
-                        // Perform additional sign-up logic or show a success message
-                      }
 
                       // sendVerificationEmailOnSignUp();
                       if (password == confirmPassword) {

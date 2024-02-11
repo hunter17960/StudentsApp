@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:students_app/Departments/Departments.dart';
+import 'package:students_app/Departments/departments.dart';
 
 class DepartementsPage extends StatefulWidget {
   const DepartementsPage({super.key});

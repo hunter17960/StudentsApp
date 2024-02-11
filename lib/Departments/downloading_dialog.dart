@@ -6,7 +6,7 @@ class DownloadingDialog extends StatefulWidget {
   const DownloadingDialog({Key? key}) : super(key: key);
 
   @override
-  _DownloadingDialogState createState() => _DownloadingDialogState();
+  State createState() {return  _DownloadingDialogState();}
 }
 
 class _DownloadingDialogState extends State<DownloadingDialog> {
@@ -29,7 +29,6 @@ class _DownloadingDialogState extends State<DownloadingDialog> {
           progress = recivedBytes / totalBytes;
         });
 
-        print(progress);
       },
       deleteOnError: true,
     ).then((_) {

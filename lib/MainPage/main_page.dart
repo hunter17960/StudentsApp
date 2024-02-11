@@ -5,24 +5,22 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
-import 'package:students_app/MainPage/chatGPT.dart';
-import 'package:students_app/MainPage/departementsPage.dart';
+import 'package:students_app/MainPage/chat_gpt.dart';
+import 'package:students_app/MainPage/departements_page.dart';
 import 'package:students_app/MainPage/calendar_page.dart';
-import 'package:students_app/MainPage/notesPage.dart';
-
-import 'package:students_app/MainPage/searchPage.dart';
-
+import 'package:students_app/MainPage/notes_page.dart';
+import 'package:students_app/MainPage/search_page.dart';
 import '../Auth/login_screen.dart';
-import 'homePage1.dart';
+import 'stats_page.dart';
 
 Color mainColor = const Color.fromARGB(255, 1, 87, 155);
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key, this.name, this.email, this.photo})
       : super(key: key);
-  final name;
-  final email;
-  final photo;
+  final dynamic name;
+  final dynamic email;
+  final dynamic photo;
 
   @override
   State<MainPage> createState() => _MainPageState();
@@ -100,7 +98,7 @@ class _MainPageState extends State<MainPage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const chatGPT()),
+                  MaterialPageRoute(builder: (context) => const ChatGPT()),
                 );
               },
               icon: Image.asset(
@@ -213,13 +211,6 @@ class _MainPageState extends State<MainPage> {
           screens: _screens,
           items: _navBarItems,
           navBarStyle: NavBarStyle.style9,
-          // navBarStyle: NavBarStyle.style9,
-          // navBarStyle: NavBarStyle.style7,
-          // navBarStyle: NavBarStyle.style10,
-          // navBarStyle: NavBarStyle.style12,
-          // navBarStyle: NavBarStyle.style13,
-          // navBarStyle: NavBarStyle.style3,
-          // navBarStyle: NavBarStyle.style6,
           onItemSelected: (index) {
             setState(() {
               _title = _navBarItems[index].title!;
@@ -229,33 +220,4 @@ class _MainPageState extends State<MainPage> {
       ),
     );
   }
-
-  // List<PersistentBottomNavBarItem> _navBarsItems() {
-  //   return [
-  //     PersistentBottomNavBarItem(
-  //       icon: const Icon(CupertinoIcons.home),
-  //       title: ("Home"),
-  //       activeColorPrimary: mainColor,
-  //       inactiveColorPrimary: CupertinoColors.systemGrey,
-  //     ),
-  //     PersistentBottomNavBarItem(
-  //       icon: const Icon(CupertinoIcons.text_badge_minus),
-  //       title: ("departements"),
-  //       activeColorPrimary: mainColor,
-  //       inactiveColorPrimary: CupertinoColors.systemGrey,
-  //     ),
-  //     PersistentBottomNavBarItem(
-  //       icon: const Icon(CupertinoIcons.search),
-  //       title: ("Search"),
-  //       activeColorPrimary: mainColor,
-  //       inactiveColorPrimary: CupertinoColors.systemGrey,
-  //     ),
-  //     PersistentBottomNavBarItem(
-  //       icon: const Icon(CupertinoIcons.news),
-  //       title: ("Notes"),
-  //       activeColorPrimary: mainColor,
-  //       inactiveColorPrimary: CupertinoColors.systemGrey,
-  //     ),
-  //   ];
-  // }
 }

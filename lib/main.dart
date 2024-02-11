@@ -1,12 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:students_app/MainPage/calendar_page.dart';
-import 'package:students_app/MainPage/searchPage.dart';
-import 'package:students_app/database/appointment_editor.dart';
+import 'package:students_app/MainPage/search_page.dart';
 import 'package:students_app/database/table.dart';
-import 'WelcomePages/welPageOfFacultyOfScience.dart';
+import 'MainPage/welcome_pages.dart';
 import 'package:students_app/Auth/login_screen.dart';
-import 'package:students_app/Auth/signUpScreen.dart';
+import 'package:students_app/Auth/sign_up_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -44,7 +43,7 @@ class MyApp extends StatelessWidget {
         return null;
       },
       routes: {
-        'facultyOfScience': (context) => const PageViewExample(),
+        'facultyOfScience': (context) => const WelcomePage(),
         'logInScreen': (context) => const LogIn(),
         'signUpScreen': (context) => const SignUp(),
         'searchPage': (context) => const SearchPage(),

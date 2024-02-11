@@ -1,15 +1,15 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:students_app/MainPage/Dio_helper.dart';
+import 'package:students_app/MainPage/diohelper.dart';
 import 'package:flutter/material.dart';
 
-class chatGPT extends StatefulWidget {
-  const chatGPT({super.key});
+class ChatGPT extends StatefulWidget {
+  const ChatGPT({super.key});
 
   @override
-  State<chatGPT> createState() => _HomePageState();
+  State<ChatGPT> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<chatGPT> {
+class _HomePageState extends State<ChatGPT> {
   TextEditingController chatTextEditing = TextEditingController();
   List<String> chat = [];
   @override
@@ -117,7 +117,6 @@ class _HomePageState extends State<chatGPT> {
       // "temperature": 0,
       // "max_tokens": 500
     }).then((value) {
-      print(value.data);
     });
   }
 }
