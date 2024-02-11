@@ -4,7 +4,7 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
-import '../MainPage/home_page.dart';
+import '../MainPage/calendar_page.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 
 class AppointmentEditor extends StatefulWidget {

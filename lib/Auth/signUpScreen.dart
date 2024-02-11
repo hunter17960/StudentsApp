@@ -3,7 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
-import 'package:students_app/Auth/buttonOfLogIn&SignUp.dart';
+import 'package:students_app/Auth/button_of_login_signup.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';

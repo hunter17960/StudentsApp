@@ -4,7 +4,7 @@ import 'package:students_app/database/table.dart';
 import 'package:tuple/tuple.dart';
 import 'package:flutter/material.dart';
 import 'package:dropdown_search/dropdown_search.dart';
-import 'package:students_app/Auth/buttonOfLogIn&SignUp.dart';
+import 'package:students_app/Auth/button_of_login_signup.dart';
 import 'package:students_app/database/user_sheets_api.dart';
 
 class SearchPage extends StatefulWidget {

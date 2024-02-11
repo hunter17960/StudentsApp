@@ -11,7 +11,6 @@ class MathematicsW extends StatelessWidget {
       textWelcome: 'Department of Mathematics',
       textAbout:
           '“Mathematics is the queen of sciences” –As said by Carl Friedrich Gauss, the German Mathematician.',
-      routeName: 'physics',
     );
   }
 }

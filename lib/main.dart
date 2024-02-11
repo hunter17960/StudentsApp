@@ -1,17 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:students_app/MainPage/home_page.dart';
+import 'package:students_app/MainPage/calendar_page.dart';
 import 'package:students_app/MainPage/searchPage.dart';
+import 'package:students_app/database/appointment_editor.dart';
 import 'package:students_app/database/table.dart';
-
 import 'WelcomePages/welPageOfFacultyOfScience.dart';
-import 'WelcomePages/welPageOfMathematics.dart';
-import 'WelcomePages/welPageOfPhysics.dart';
-import 'WelcomePages/welPageOfChemistry.dart';
-import 'WelcomePages/welPageOfZoology&Entomology.dart';
-import 'WelcomePages/welPageOfBotany&Microbiology.dart';
-import 'WelcomePages/welPageOfGeology.dart';
-import 'package:students_app/Auth/logInScreen.dart';
+import 'package:students_app/Auth/login_screen.dart';
 import 'package:students_app/Auth/signUpScreen.dart';
 
 void main() async {
@@ -50,19 +44,7 @@ class MyApp extends StatelessWidget {
         return null;
       },
       routes: {
-        'facultyOfScience': (context) => const FacultyOfScience(
-              imageName: 'FacultyOfScience.png',
-              textAbout:
-                  'The University of Assiut was established in October 1957, with only two faculties the faculty of Science and the faculty of Engineering.',
-              textWelcome: 'Welcome to',
-              routeName: 'mathematics',
-            ),
-        'mathematics': (context) => const MathematicsW(),
-        'physics': (context) => const PhysicsW(),
-        'chemistry': (context) => const ChemistryW(),
-        'geology': (context) => const GeologyW(),
-        'botanyAndMicrobiology': (context) => const BotanyAndMicrobiology(),
-        'zoologyAndEntomology': (context) => const ZoologyAndEntomology(),
+        'facultyOfScience': (context) => const PageViewExample(),
         'logInScreen': (context) => const LogIn(),
         'signUpScreen': (context) => const SignUp(),
         'searchPage': (context) => const SearchPage(),

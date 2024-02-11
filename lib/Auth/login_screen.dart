@@ -1,6 +1,4 @@
-
 import 'dart:io';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +27,7 @@ class _LogInState extends State<LogIn> {
   bool loginLoading = false;
   bool _obscureAction = true;
 
-  final _Auth = FirebaseAuth.instance;
+  final _auth = FirebaseAuth.instance;
   GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -155,7 +153,7 @@ class _LogInState extends State<LogIn> {
                 });
                 try {
                   UserCredential userCredential =
-                      await _Auth.signInWithEmailAndPassword(
+                      await _auth.signInWithEmailAndPassword(
                           email: email, password: password);
                   setState(() {
                     loginLoading = false;
@@ -171,7 +169,9 @@ class _LogInState extends State<LogIn> {
                     backgroundColor: Colors.black54,
                     margin: EdgeInsets.only(bottom: 100, left: 80, right: 80),
                   );
-                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  if (context.mounted) {
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  }
                   var snapshot = await _firestore
                       .collection('users')
                       .doc(userCredential.user?.uid)
@@ -179,7 +179,8 @@ class _LogInState extends State<LogIn> {
                   var userData = snapshot.data() as Map<String,
                       dynamic>; // Explicitly cast to Map<String, dynamic>
                   final nameUser = userData['name'];
-                  Navigator.pushReplacement(
+                  if (context.mounted) {
+                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                           builder: (context) => MainPage(
@@ -187,13 +188,16 @@ class _LogInState extends State<LogIn> {
                                 email: email,
                                 photo: '',
                               )));
+                  }
                 } on SocketException {
+                  // ignore: avoid_print
                   print("error connection");
                 } catch (e) {
                   setState(() {
                     loginLoading = false;
                   });
-                  showDialog(
+                  if (context.mounted) {
+                    showDialog(
                     context: context,
                     builder: (context) {
                       return AlertDialog(
@@ -213,7 +217,9 @@ class _LogInState extends State<LogIn> {
                         backgroundColor: Colors.white70,
                       );
                     },
-                  ); // Only catches an exception of type `Exception`.
+                  );
+                  }
+                   // Only catches an exception of type `Exception`.
                 }
               },
             ),
@@ -255,7 +261,8 @@ class _LogInState extends State<LogIn> {
                       backgroundColor: Colors.black54,
                       margin: EdgeInsets.only(bottom: 100, left: 80, right: 80),
                     );
-                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                    if (context.mounted) {
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
                     Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
@@ -266,6 +273,7 @@ class _LogInState extends State<LogIn> {
                     setState(() {
                       loginLoading = false;
                     });
+                    }
                   },
                   child: const Text(
                     'Google',

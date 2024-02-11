@@ -5,14 +5,14 @@ import '../screens/note_reader.dart';
 import '../screens/note_editor.dart';
 import '../widgets/note_card.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class NOTEScreen extends StatefulWidget {
+  const NOTEScreen({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<NOTEScreen> createState() => _NOTEScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _NOTEScreenState extends State<NOTEScreen> {
   @override
   Widget build(BuildContext context) {
     final FirebaseAuth auth = FirebaseAuth.instance;

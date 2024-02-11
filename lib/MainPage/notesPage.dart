@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../screens/home_screen.dart';
+import '../screens/note_screen.dart';
 
 class NotesPage extends StatefulWidget {
   const NotesPage({super.key});
@@ -14,7 +14,7 @@ class _NotesPageState extends State<NotesPage> {
     return const Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child: HomeScreen(),
+        child: NOTEScreen(),
       ),
     );
   }
