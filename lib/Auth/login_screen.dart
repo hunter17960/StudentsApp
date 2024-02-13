@@ -1,38 +1,27 @@
+
 import 'dart:io';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
-import 'package:google_sign_in/google_sign_in.dart';
+import 'package:students_app/Auth/auth_service.dart';
 import 'package:students_app/Auth/button_of_login_signup.dart';
 import 'package:students_app/MainPage/main_page.dart';
 
 class LogIn extends StatefulWidget {
   const LogIn({super.key});
-
   @override
   State<LogIn> createState() => _LogInState();
 }
-
 class _LogInState extends State<LogIn> {
   late String email;
   late String password;
-  late String userName;
-  late String profilePicture;
-
   late String emailGoogle;
   late String userNameGoogle;
   late String profilePictureGoogle;
 
   bool loginLoading = false;
   bool _obscureAction = true;
-
-  final _auth = FirebaseAuth.instance;
   GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
-
-  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-
-  final GoogleSignIn _googleSignIn = GoogleSignIn();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -124,7 +113,8 @@ class _LogInState extends State<LogIn> {
                 ),
               ]),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 1),
+            const SizedBox(height: 1),
             Row(children: [
               const SizedBox(width: 15),
               const Text(
@@ -153,41 +143,17 @@ class _LogInState extends State<LogIn> {
                 });
                 try {
                   UserCredential userCredential =
-                      await _auth.signInWithEmailAndPassword(
+                      await FirebaseAuth.instance.signInWithEmailAndPassword(
                           email: email, password: password);
+                  User? user = userCredential.user;
                   setState(() {
                     loginLoading = false;
                   });
-                  var snackBar = const SnackBar(
-                    duration: Duration(seconds: 1),
-                    content: Text(
-                      textAlign: TextAlign.center,
-                      'Logged in successfully!',
-                      style: TextStyle(color: Colors.greenAccent),
-                    ),
-                    behavior: SnackBarBehavior.floating,
-                    backgroundColor: Colors.black54,
-                    margin: EdgeInsets.only(bottom: 100, left: 80, right: 80),
-                  );
-                  if (context.mounted) {
-                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                  }
-                  var snapshot = await _firestore
-                      .collection('users')
-                      .doc(userCredential.user?.uid)
-                      .get();
-                  var userData = snapshot.data() as Map<String,
-                      dynamic>; // Explicitly cast to Map<String, dynamic>
-                  final nameUser = userData['name'];
                   if (context.mounted) {
                     Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => MainPage(
-                                name: nameUser,
-                                email: email,
-                                photo: '',
-                              )));
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => MainPage(user!)));
                   }
                 } on SocketException {
                   // ignore: avoid_print
@@ -198,28 +164,28 @@ class _LogInState extends State<LogIn> {
                   });
                   if (context.mounted) {
                     showDialog(
-                    context: context,
-                    builder: (context) {
-                      return AlertDialog(
-                        shape: const RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(15)),
-                        ),
-                        title: const Text("Error"),
-                        titleTextStyle:
-                            const TextStyle(color: Colors.redAccent),
-                        content: Text(
-                          '$e',
-                          style: const TextStyle(
-                            fontSize: 18,
-                            color: Colors.black45,
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(15)),
                           ),
-                        ),
-                        backgroundColor: Colors.white70,
-                      );
-                    },
-                  );
+                          title: const Text("Error"),
+                          titleTextStyle:
+                              const TextStyle(color: Colors.redAccent),
+                          content: Text(
+                            '$e',
+                            style: const TextStyle(
+                              fontSize: 18,
+                              color: Colors.black45,
+                            ),
+                          ),
+                          backgroundColor: Colors.white70,
+                        );
+                      },
+                    );
                   }
-                   // Only catches an exception of type `Exception`.
+                  // Only catches an exception of type `Exception`.
                 }
               },
             ),
@@ -237,48 +203,27 @@ class _LogInState extends State<LogIn> {
                 ),
                 const SizedBox(height: 10),
                 TextButton(
-                  onPressed: () async {
-                    setState(() {
-                      loginLoading = true;
-                    });
-                    await _googleSignIn.signIn().then((value) {
-                      setState(() {
-                        emailGoogle = value!.email;
-                        userNameGoogle = value.displayName!;
-                        profilePictureGoogle = value.photoUrl!;
-                      });
-                    });
-                    var snackBar = const SnackBar(
-                      duration: Duration(seconds: 1),
-                      content: Text(
-                        textAlign: TextAlign.center,
-                        'Logged in successfully!',
-                        style: TextStyle(
-                            color: Colors.greenAccent,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      behavior: SnackBarBehavior.floating,
-                      backgroundColor: Colors.black54,
-                      margin: EdgeInsets.only(bottom: 100, left: 80, right: 80),
-                    );
-                    if (context.mounted) {
-                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                    Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => MainPage(
-                                name: userNameGoogle,
-                                email: emailGoogle,
-                                photo: profilePictureGoogle)));
-                    setState(() {
-                      loginLoading = false;
-                    });
-                    }
-                  },
                   child: const Text(
                     'Google',
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
+                  onPressed: () async {
+                    setState(() {
+                      loginLoading = true;
+                    });
+                    User? user = await AuthService().signInWithGoogle();
+                    
+                    setState(() {
+                        loginLoading = false;
+                      });
+                    if (context.mounted) {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MainPage(user!)));
+                      
+                    }
+                  },
                 ),
               ],
             ),

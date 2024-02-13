@@ -8,13 +8,13 @@ final FirebaseAuth _auth = FirebaseAuth.instance;
 final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 final CollectionReference _eventsCollection = _firestore.collection('events');
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class CalendarPage extends StatefulWidget {
+  const CalendarPage({Key? key}) : super(key: key);
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<CalendarPage> createState() => _CalendarPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _CalendarPageState extends State<CalendarPage> {
   @override
   Widget build(BuildContext context) {
     final User? user = _auth.currentUser;
@@ -68,11 +68,12 @@ class _HomePageState extends State<HomePage> {
                       actions: [
                         // CANCEL Button
                         TextButton(
-                          onPressed: () => Navigator.pop(context),
                           child: const Text('CANCEL'),
+                          onPressed: () => Navigator.pop(context),
                         ),
                         // Edit Button
                         TextButton(
+                          child: const Text('EDIT'),
                           onPressed: () async {
                             Appointment appointment = await Navigator.push(
                               context,
@@ -85,16 +86,15 @@ class _HomePageState extends State<HomePage> {
                             // ignore: use_build_context_synchronously
                             Navigator.pop(context);
                           },
-                          child: const Text('EDIT'),
                         ),
                         // Delete Button
                         TextButton(
+                          child: const Text('DELETE'),
                           onPressed: () {
                             deleteAppointment(getAppointmentdoc(
                                 snapshot, patternAppointment));
                             Navigator.pop(context);
                           },
-                          child: const Text('DELETE'),
                         ),
                       ],
                     ),
